@@ -71,6 +71,10 @@ body {
   color: hsl(30, 38%, 92%);
 }
 
+.ct2 button:hover {
+  background-color: hsl(154, 55%, 17%);
+  cursor: pointer;
+}
 @media (min-width: 375px) {
   .ct2 p {
     font-size: 14px;
