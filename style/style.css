@@ -10,7 +10,7 @@
 body {
   background-color: hsl(30, 38%, 92%);
 }
-.card {
+.container {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -53,9 +53,6 @@ body {
   display: flex;
   align-items: center;
   gap: 25px;
-}
-.price p {
-  text-decoration: line-through;
 }
 .ct2 button {
   display: flex;
@@ -112,7 +109,7 @@ body {
   }
 }
 @media (min-width: 540px) {
-  .card {
+  .container {
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -145,7 +142,9 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .card {
+
+  .container {
+    height: 50%;
     border-radius: 100%;
     flex-direction: row;
     border-radius: 100%;
@@ -158,6 +157,7 @@ body {
     background-image: url(./../images/image-product-desktop.jpg);
   }
   .ct2 {
+    height: 100%;
     width: 50%;
     gap: 30px;
     padding: 50px 30px;
@@ -176,7 +176,7 @@ body {
   }
 }
 @media (min-width: 1024px) {
-  .card {
+  .container {
     padding: 0;
     width: 50%;
     height: 66%;
