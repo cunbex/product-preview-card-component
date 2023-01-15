@@ -1,11 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
 *,
-*::after,
-*::before {
-  margin: 0px;
-  padding: 0px;
+*::before,
+*::after {
   box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+.visually-hidden {
+  display: none;
 }
 body {
   background-color: hsl(30, 38%, 92%);
@@ -13,53 +52,61 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 1em;
 }
-.ct1 {
-  height: 30vh;
-  background-image: url("./../images/image-product-mobile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 40%;
-  width: 100%;
+picture {
+  overflow: hidden;
   border-radius: 10px 10px 0 0;
 }
+picture > img {
+  width: 100%;
+}
 .ct2 {
-  padding: 20px;
+  padding: 1em;
   display: flex;
   background-color: white;
   flex-direction: column;
-  gap: 15px;
+  gap: 1em;
 }
-.ct2 p {
+.ct2 > p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.6rem;
   color: hsl(228, 12%, 48%);
 }
-.ct2 p:first-child {
+.ct2 > p:nth-child(1) {
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 0.3rem;
 }
 .ct2 h1 {
   font-family: "Fraunces", serif;
+  font-weight: 700;
   color: hsl(212, 21%, 14%);
-  font-size: 22px;
-}
-.ct2 h1:nth-child(1) {
-  color: hsl(158, 36%, 37%);
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 .price {
   display: flex;
   align-items: center;
   gap: 25px;
 }
+.price > p {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(158, 36%, 37%);
+}
+.price del {
+  color: hsl(228, 12%, 48%);
+  font-size: 0.8rem;
+}
 .ct2 button {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px 5px;
-  border-radius: 10px;
+  align-items: center;
+  gap: 1.2em;
+  padding: 0.6em;
+  border-radius: 5px;
   background-color: hsl(158, 36%, 37%);
   border: none;
 }
@@ -72,147 +119,197 @@ body {
   background-color: hsl(154, 55%, 17%);
   cursor: pointer;
 }
-@media (min-width: 375px) {
-  .ct2 p {
-    font-size: 14px;
+
+@media (min-width: 360px) {
+  .ct2 > p {
+    font-size: 0.88rem;
   }
   .ct2 h1 {
-    font-size: 30px;
+    font-size: 2rem;
+    line-height: 2rem;
   }
-  .ct2 button {
-    padding: 15px 10px;
+  .price > p {
+    font-size: 2rem;
   }
-  .price {
-    margin-top: 10px;
+  .price del {
+    font-size: 1rem;
   }
 }
-@media (min-width: 319px) {
-  .ct1 {
-    height: 40vh;
+@media (min-width: 412px) {
+  .ct2 {
+    padding-top: 2em;
   }
-  .ct2 p {
-    font-size: 14px;
+  .ct2 > p {
+    font-size: 1.09rem;
   }
   .ct2 h1 {
-    font-size: 26px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
-  .ct2 button {
-    padding: 15px 10px;
+  .price > p {
+    font-size: 2.5rem;
   }
-  .price {
-    margin-top: 10px;
+  .price del {
+    font-size: 1.2rem;
   }
-}
-@media (min-width: 361px) {
-  .ct2 h1 {
-    font-size: 32px;
+  .ct2 button > p {
+    font-size: 1.5rem;
+  }
+  .ct2 button > img {
+    width: 1.3rem;
   }
 }
 @media (min-width: 540px) {
   .container {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
+    padding: 2em;
   }
-  .ct2 > h1 {
-    padding-right: 15%;
+  .ct2 h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .ct2 > p {
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
-  .ct1 {
-    height: 40vh;
+  .container {
+    padding: 3em;
   }
-  .ct2 p {
-    font-size: 22px;
+
+  .ct2 {
+    gap: 1.5em;
+    padding: 2em 3em 3em 3em;
+  }
+  picture {
+    border-radius: 20px 20px 0 0;
+  }
+  .ct2 > p {
+    font-size: 1.3rem;
   }
   .ct2 h1 {
-    font-size: 52px;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
-  .ct2 button {
-    padding: 20px 15px;
+  .price > p {
+    font-size: 3.5rem;
   }
-  .price {
-    margin-top: 20px;
+  .price del {
+    font-size: 2rem;
+  }
+  .ct2 button > p {
+    font-size: 2.5rem;
+  }
+  .ct2 button > img {
+    width: 1.6rem;
+  }
+}
+@media (min-width: 820px) {
+  .container {
+    padding: 4em;
+  }
+  .ct2 h1 {
+    font-size: 3.9rem;
+    line-height: 3.9rem;
+  }
+  .ct2 > p {
+    font-size: 1.9rem;
   }
 }
 @media (min-width: 912px) {
   body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   .container {
-    height: 50%;
-    border-radius: 100%;
+    overflow: hidden;
+    padding: 0;
+    width: 80%;
     flex-direction: row;
-    border-radius: 100%;
-    gap: 0px;
+    border-radius: 10px;
   }
-  .ct1 {
-    height: 100%;
+  picture {
+    border-radius: 0;
     width: 50%;
-    border-radius: 10px 0 0 10px;
-    background-image: url(./../images/image-product-desktop.jpg);
+  }
+  picture > img {
+    height: 100%;
   }
   .ct2 {
-    height: 100%;
     width: 50%;
-    gap: 30px;
-    padding: 50px 30px;
-  }
-  .ct2 p {
-    font-size: 20px;
   }
   .ct2 h1 {
-    font-size: 34px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
-  .ct2 button {
-    padding: 20px 15px;
+  .ct2 > p {
+    font-size: 1rem;
   }
-  .price {
-    margin-top: 20px;
+  .price > p {
+    font-size: 2.5rem;
+  }
+  .price del {
+    font-size: 1rem;
+  }
+  .ct2 button > p {
+    font-size: 1.2rem;
+  }
+  .ct2 button > img {
+    width: 1rem;
   }
 }
 @media (min-width: 1024px) {
   .container {
+    overflow: hidden;
     padding: 0;
     width: 50%;
-    height: 66%;
+    height: 70%;
+    flex-direction: row;
   }
   .ct2 {
-    gap: 15px;
-    padding: 30px;
-  }
-  .ct2 p {
-    line-height: 18px;
-    font-size: 12px;
+    padding: 1.5em;
   }
   .ct2 h1 {
-    padding: 0;
-    font-size: 28px;
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
-  .ct2 button {
-    padding: 15px 10px;
+  .ct2 > p {
+    font-size: 0.8rem;
   }
-  .price {
-    margin-top: 15px;
+  .price > p {
+    font-size: 1.8rem;
+  }
+  .price del {
+    font-size: 1rem;
+  }
+  .ct2 button > p {
+    font-size: 1rem;
+  }
+  .ct2 button > img {
+    width: 0.9rem;
   }
 }
 @media (min-width: 1280px) {
   .ct2 {
-    gap: 25px;
-    padding: 40px 30px;
-  }
-  .ct2 p {
-    font-size: 16px;
-    line-height: 24px;
+    padding: 2em;
   }
   .ct2 h1 {
-    font-size: 32px;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
   }
-  .ct2 button {
-    padding: 15px 10px;
+  .ct2 > p {
+    font-size: 1rem;
+  }
+  .price > p {
+    font-size: 2.2rem;
+  }
+  .price del {
+    font-size: 1.2rem;
+  }
+  .ct2 button > p {
+    font-size: 1.2rem;
+  }
+  .ct2 button > img {
+    width: 1rem;
   }
 }
