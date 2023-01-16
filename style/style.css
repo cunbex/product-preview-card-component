@@ -233,7 +233,7 @@ picture > img {
     width: 50%;
   }
   picture > img {
-    height: inherit;
+    height: 100%;
   }
   .ct2 {
     width: 50%;
