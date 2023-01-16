@@ -234,7 +234,6 @@ picture > img {
   }
   picture > img {
     height: 100%;
-    object-fit: fill;
   }
   .ct2 {
     width: 50%;
@@ -264,19 +263,19 @@ picture > img {
     overflow: hidden;
     padding: 0;
     width: 50%;
-    height: 65%;
+    height: 60%;
     flex-direction: row;
   }
   .ct2 {
     padding: 1.5em;
-    gap: 1em;
+    gap: 0.7em;
   }
   .ct2 h1 {
     font-size: 1.8rem;
     line-height: 2rem;
   }
   .ct2 > p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
   .price > p {
     font-size: 1.8rem;
@@ -294,14 +293,14 @@ picture > img {
 @media (min-width: 1280px) {
   .ct2 {
     padding: 2em;
-    gap: 2em;
+    gap: 1.5em;
   }
   .ct2 h1 {
     font-size: 2.2rem;
     line-height: 2.2rem;
   }
   .ct2 > p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .price > p {
     font-size: 2.2rem;
