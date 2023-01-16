@@ -234,6 +234,7 @@ picture > img {
   }
   picture > img {
     height: 100%;
+    object-fit: fill;
   }
   .ct2 {
     width: 50%;
