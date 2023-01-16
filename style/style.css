@@ -233,7 +233,7 @@ picture > img {
     width: 50%;
   }
   picture > img {
-    object-fit: cover;
+    object-fit: fill;
   }
   .ct2 {
     width: 50%;
