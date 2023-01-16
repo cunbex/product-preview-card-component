@@ -262,7 +262,7 @@ picture > img {
   .container {
     overflow: hidden;
     padding: 0;
-    width: 50%;
+    width: 55%;
     height: 70%;
     flex-direction: row;
   }
