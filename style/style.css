@@ -120,7 +120,7 @@ picture > img {
   cursor: pointer;
 }
 
-@media (min-width: 360px) {
+@media screen and (min-width: 360px) {
   .ct2 > p {
     font-size: 0.88rem;
   }
@@ -135,7 +135,7 @@ picture > img {
     font-size: 1rem;
   }
 }
-@media (min-width: 412px) {
+@media screen and (min-width: 412px) {
   .ct2 {
     padding-top: 2em;
   }
@@ -159,7 +159,7 @@ picture > img {
     width: 1.3rem;
   }
 }
-@media (min-width: 540px) {
+@media screen and (min-width: 540px) {
   .container {
     padding: 2em;
   }
@@ -171,7 +171,7 @@ picture > img {
     font-size: 1rem;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
     padding: 3em;
   }
@@ -203,7 +203,7 @@ picture > img {
     width: 1.6rem;
   }
 }
-@media (min-width: 820px) {
+@media screen and (min-width: 820px) {
   .container {
     padding: 4em;
   }
@@ -215,7 +215,7 @@ picture > img {
     font-size: 1.9rem;
   }
 }
-@media (min-width: 912px) {
+@media screen and (min-width: 912px) {
   body {
     display: flex;
     justify-content: center;
@@ -258,16 +258,17 @@ picture > img {
     width: 1rem;
   }
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .container {
     overflow: hidden;
     padding: 0;
-    width: 55%;
-    height: 70%;
+    width: 50%;
+    height: 65%;
     flex-direction: row;
   }
   .ct2 {
     padding: 1.5em;
+    gap: 1em;
   }
   .ct2 h1 {
     font-size: 1.8rem;
@@ -292,6 +293,7 @@ picture > img {
 @media (min-width: 1280px) {
   .ct2 {
     padding: 2em;
+    gap: 2em;
   }
   .ct2 h1 {
     font-size: 2.2rem;
